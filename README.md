@@ -85,3 +85,20 @@ public class SecurityConfig implements WebFluxConfigurer {
 
 
 ```
+# JwtAuthenticationToken.java
+```
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+
+public class JwtAuthenticationToken extends UsernamePasswordAuthenticationToken {
+
+    public JwtAuthenticationToken(String token) {
+        super(token, null);
+    }
+
+    @Override
+    public Object getCredentials() {
+        return null;
+    }
+}
+
+```
